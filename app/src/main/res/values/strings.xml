@@ -1,0 +1,9 @@
+<resources>
+
+    <string name="app_name">AgriRent</string>
+    <string name="mcaproject">MCAProject</string>
+    <string name="welcome_back">Welcome Back</string>
+    <string name="click_me">Click Me</string>
+
+
+</resources>

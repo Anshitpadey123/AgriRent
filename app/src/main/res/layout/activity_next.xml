@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/nextbackground"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Choose Your Role"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="45dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select how you want to continue"
+        android:textSize="23dp"
+        android:textStyle="italic"
+        android:layout_marginBottom="68dp"/>
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/adminlogo"
+        android:backgroundTint="@color/white"
+        android:layout_marginBottom="10dp"
+        android:layout_gravity="center"/>
+    <Button
+        android:id="@+id/btn_admin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Admin"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/green"
+        android:textSize="30dp"
+        android:layout_marginBottom="30dp"/>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/userlogo"
+        android:backgroundTint="@color/white"
+        android:layout_marginBottom="40dp"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"/>
+
+    <Button
+        android:id="@+id/btn_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="User"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/green"
+        android:layout_marginBottom="40dp"/>
+
+
+
+</LinearLayout>
