@@ -32,5 +32,12 @@ class AdminLogin : AppCompatActivity() {
             finish()
 
         }
+        val login=findViewById<Button>(R.id.btnLogin)
+        login.setOnClickListener {
+            val intent= Intent(this, Owner_HomeScreen::class.java)
+            startActivity(intent)
+            finish()
+
+        }
     }
 }
