@@ -9,4 +9,8 @@
     <color name="lightgrey">#DCDCDC</color>
 
 
+    <color name="equipment_available">#198754</color>
+    <color name="equipment_unavailable">#B54747</color>
+
+
 </resources>
