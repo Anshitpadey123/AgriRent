@@ -2,6 +2,7 @@ package com.example.mcaproject
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -19,8 +20,15 @@ class UserLogin : AppCompatActivity() {
 
         val forgot = findViewById<TextView>(R.id.txtForgotPassword)
 
+        val farmerhome = findViewById<Button>(R.id.btnLogin)
+
         forgot.setOnClickListener {
             val intent  = Intent(this,ForgotPassword::class.java)
+            startActivity(intent)
+
+        }
+        farmerhome.setOnClickListener {
+            val intent  = Intent(this, Farmerhomescreen::class.java)
             startActivity(intent)
 
         }

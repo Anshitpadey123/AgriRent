@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F8F5">
+
+    <!-- Screen heading -->
+    <TextView
+        android:id="@+id/screenTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:text="Find Equipment"
+        android:textColor="#173D27"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/screenSubtitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="20dp"
+        android:text="Rent the right equipment for your farm"
+        android:textColor="#68776C"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/screenTitle" />
+
+    <!-- Transparent search area -->
+    <LinearLayout
+        android:id="@+id/searchInputCard"
+        android:layout_width="0dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="20dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:background="@android:color/transparent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/screenSubtitle">
+
+        <ImageView
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:contentDescription="Search"
+            android:src="@drawable/search_alt_2_svgrepo_com__1_"
+            app:tint="#66816D" />
+
+        <EditText
+            android:id="@+id/searchEquipment"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:hint="Search tractor, harvester..."
+            android:inputType="text"
+            android:imeOptions="actionSearch"
+            android:singleLine="true"
+            android:padding="0dp"
+            android:textColor="#183D28"
+            android:textColorHint="#929D94"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+    <!-- Category heading -->
+    <TextView
+        android:id="@+id/categoryHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="16dp"
+        android:text="Category"
+        android:textColor="#203D2A"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/searchInputCard" />
+
+    <!-- Horizontal category selection -->
+    <HorizontalScrollView
+        android:id="@+id/categoryScroll"
+        android:layout_width="0dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="20dp"
+        android:fillViewport="true"
+        android:scrollbars="none"
+        android:background="@android:color/transparent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/categoryHeading">
+
+        <RadioGroup
+            android:id="@+id/categoryRadioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:background="@android:color/transparent">
+
+            <RadioButton
+                android:id="@+id/categoryAll"
+                android:layout_width="wrap_content"
+                android:layout_height="38dp"
+                android:layout_marginEnd="14dp"
+                android:background="@android:color/transparent"
+                android:button="@null"
+                android:checked="true"
+                android:gravity="center"
+                android:minWidth="45dp"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
+                android:text="All"
+                android:textColor="#198754"
+                android:textSize="13sp" />
+
+            <RadioButton
+                android:id="@+id/categoryTractor"
+                android:layout_width="wrap_content"
+                android:layout_height="38dp"
+                android:layout_marginEnd="14dp"
+                android:background="@android:color/transparent"
+                android:button="@null"
+                android:gravity="center"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
+                android:text="Tractors"
+                android:textColor="#536357"
+                android:textSize="13sp" />
+
+            <RadioButton
+                android:id="@+id/categoryHarvester"
+                android:layout_width="wrap_content"
+                android:layout_height="38dp"
+                android:layout_marginEnd="14dp"
+                android:background="@android:color/transparent"
+                android:button="@null"
+                android:gravity="center"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
+                android:text="Harvesters"
+                android:textColor="#536357"
+                android:textSize="13sp" />
+
+            <RadioButton
+                android:id="@+id/categoryImplement"
+                android:layout_width="wrap_content"
+                android:layout_height="38dp"
+                android:background="@android:color/transparent"
+                android:button="@null"
+                android:gravity="center"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
+                android:text="Implements"
+                android:textColor="#536357"
+                android:textSize="13sp" />
+
+        </RadioGroup>
+    </HorizontalScrollView>
+
+    <!-- Transparent price and availability filters -->
+    <LinearLayout
+        android:id="@+id/filterCard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="20dp"
+        android:orientation="vertical"
+        android:background="@android:color/transparent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/categoryScroll">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Maximum price per day"
+                android:textColor="#263D2D"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/priceValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="₹5,000/day"
+                android:textColor="#198754"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <SeekBar
+            android:id="@+id/priceSeekBar"
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:max="5000"
+            android:progress="5000"
+            android:progressTint="#198754"
+            android:thumbTint="#198754" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="₹0"
+                android:textColor="#89958D"
+                android:textSize="11sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="₹5,000"
+                android:textColor="#89958D"
+                android:textSize="11sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Available equipment only"
+                    android:textColor="#263D2D"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="Hide unavailable items"
+                    android:textColor="#89958D"
+                    android:textSize="11sp" />
+
+            </LinearLayout>
+
+            <com.google.android.material.materialswitch.MaterialSwitch
+                android:id="@+id/availableSwitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:background="@android:color/transparent"
+                app:thumbTint="#FFFFFF"
+                app:trackTint="#B9CDBE" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Equipment result heading -->
+    <LinearLayout
+        android:id="@+id/resultsHeader"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="20dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/filterCard">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Equipment near you"
+            android:textColor="#203D2A"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/resultCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Equipment items"
+            android:textColor="#6D7B70"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+    <!-- No results message -->
+    <TextView
+        android:id="@+id/emptyResults"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="24dp"
+        android:gravity="center"
+        android:text="No equipment found. Try changing your filters."
+        android:textColor="#6D7B70"
+        android:textSize="14sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/bottomNav"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/resultsHeader" />
+
+    <!-- Scrollable equipment list -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/equipmentRecyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        android:paddingStart="20dp"
+        android:paddingTop="8dp"
+        android:paddingEnd="20dp"
+        android:paddingBottom="16dp"
+        android:overScrollMode="ifContentScrolls"
+        app:layout_constraintBottom_toTopOf="@id/bottomNav"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/resultsHeader" />
+
+    <!-- Bottom navigation -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNav"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        app:backgroundTint="@android:color/transparent"
+        app:elevation="0dp"
+        app:itemBackground="@android:color/transparent"
+
+        app:itemIconTint="@color/bottom_nav_selector"
+        app:itemTextColor="@color/bottom_nav_selector"
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/farmer_bottom_menu"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
