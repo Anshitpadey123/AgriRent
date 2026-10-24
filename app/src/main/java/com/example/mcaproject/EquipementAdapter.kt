@@ -1,10 +1,11 @@
+
 package com.example.mcaproject
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.button.MaterialButton
 
@@ -77,15 +78,41 @@ class EquipmentAdapter(
 
         holder.actionButton.isEnabled = equipment.available
         holder.actionButton.text =
-            if (equipment.available) "View Details" else "Unavailable"
+            if (equipment.available) "View Details"
+            else "Unavailable"
 
         holder.actionButton.setOnClickListener {
-            Toast.makeText(
-                holder.itemView.context,
-                "${equipment.name} — ₹${equipment.price}/day",
-                Toast.LENGTH_SHORT
-            ).show()
+            if (equipment.available) {
+                openEquipmentDetails(holder, equipment)
+            }
         }
+
+        // Tapping the equipment card also opens its details.
+        holder.itemView.setOnClickListener {
+            if (equipment.available) {
+                openEquipmentDetails(holder, equipment)
+            }
+        }
+    }
+
+    private fun openEquipmentDetails(
+        holder: EquipmentViewHolder,
+        equipment: Equipment
+    ) {
+        val intent = Intent(
+            holder.itemView.context,
+            EquipmentDetailsActivity::class.java
+        ).apply {
+            putExtra("equipment_id", equipment.id)
+            putExtra("equipment_name", equipment.name)
+            putExtra("equipment_category", equipment.category)
+            putExtra("equipment_price", equipment.price)
+            putExtra("equipment_emoji", equipment.emoji)
+            putExtra("equipment_location", equipment.location)
+            putExtra("equipment_available", equipment.available)
+        }
+
+        holder.itemView.context.startActivity(intent)
     }
 
     override fun getItemCount(): Int = items.size
