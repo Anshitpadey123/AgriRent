@@ -50,7 +50,7 @@
                 android:layout_width="28dp"
                 android:layout_height="28dp"
                 android:src="@android:drawable/ic_dialog_info"
-                android:tint="@android:color/white"
+                app:tint="@android:color/white"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"/>
 
@@ -426,7 +426,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="@android:color/white"
-
+        app:menu="@menu/farmer_bottom_menu"
         app:labelVisibilityMode="labeled"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
