@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F7F8FA">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:scrollbars="none">
+
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+                        <!-- Back Button + Title -->
+        <LinearLayout
+        android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:src="@drawable/baseline_arrow_back_24"
+            app:tint="#2E7D32"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="Add Equipment"
+            android:textStyle="bold"
+            android:textColor="#212121"
+            android:textSize="24sp"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="List your equipment for rent"
+            android:textColor="#757575"
+            android:textSize="14sp"
+            android:layout_marginTop="6dp"/>
+
+                        <!-- Upload Image Card -->
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:layout_marginTop="24dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="18dp"
+            app:cardElevation="3dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imgEquipment"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/baseline_camera_enhance_24"
+            app:tint="#2E7D32"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tap to upload equipment image"
+            android:textColor="#757575"
+            android:textSize="15sp"
+            android:layout_marginTop="10dp"/>
+
+        </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+                        <!-- Basic Details Title -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Basic Details"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="#212121"
+            android:layout_marginTop="28dp"/>
+                <!-- Equipment Name -->
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="Equipment Name"
+            app:boxCornerRadiusTopStart="12dp"
+            app:boxCornerRadiusTopEnd="12dp"
+            app:boxCornerRadiusBottomStart="12dp"
+            app:boxCornerRadiusBottomEnd="12dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etEquipmentName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Category -->
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:hint="Category"
+            app:endIconMode="dropdown_menu"
+            app:boxCornerRadiusTopStart="12dp"
+            app:boxCornerRadiusTopEnd="12dp"
+            app:boxCornerRadiusBottomStart="12dp"
+            app:boxCornerRadiusBottomEnd="12dp">
+
+        <AutoCompleteTextView
+            android:id="@+id/actCategory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="none"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Brand -->
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:hint="Brand"
+            app:boxCornerRadiusTopStart="12dp"
+            app:boxCornerRadiusTopEnd="12dp"
+            app:boxCornerRadiusBottomStart="12dp"
+            app:boxCornerRadiusBottomEnd="12dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etBrand"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Model -->
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:hint="Model"
+            app:boxCornerRadiusTopStart="12dp"
+            app:boxCornerRadiusTopEnd="12dp"
+            app:boxCornerRadiusBottomStart="12dp"
+            app:boxCornerRadiusBottomEnd="12dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etModel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Rental Details -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="Rental Details"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="#212121"/>
+
+                <!-- Rent Per Day -->
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="Rent Per Day (₹)"
+            app:boxCornerRadiusTopStart="12dp"
+            app:boxCornerRadiusTopEnd="12dp"
+            app:boxCornerRadiusBottomStart="12dp"
+            app:boxCornerRadiusBottomEnd="12dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etRentPerDay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Location -->
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:hint="Location"
+            app:boxCornerRadiusTopStart="12dp"
+            app:boxCornerRadiusTopEnd="12dp"
+            app:boxCornerRadiusBottomStart="12dp"
+            app:boxCornerRadiusBottomEnd="12dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+             android:id="@+id/etLocation"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Description -->
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:hint="Description"
+            app:boxCornerRadiusTopStart="12dp"
+            app:boxCornerRadiusTopEnd="12dp"
+            app:boxCornerRadiusBottomStart="12dp"
+            app:boxCornerRadiusBottomEnd="12dp"/>
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/etDescription"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:hint="Description"
+        android:gravity="top|start"
+        android:inputType="textMultiLine"
+        android:minLines="4"/>
+
+
+
+
+                <!-- Add Equipment Button -->
+
+    <com.google.android.material.button.MaterialButton
+         android:id="@+id/btnAddEquipment"
+         android:layout_width="match_parent"
+         android:layout_height="56dp"
+         android:layout_marginTop="28dp"
+         android:layout_marginBottom="24dp"
+         android:text="Add Equipment"
+         android:textAllCaps="false"
+         android:textSize="16sp"
+         android:textColor="@android:color/white"
+         android:backgroundTint="#2E7D32"
+         app:cornerRadius="14dp"/>
+
+        </LinearLayout>
+
+</ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>

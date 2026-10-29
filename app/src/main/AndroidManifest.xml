@@ -94,14 +94,11 @@
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".EquipmentDetailsActivity"
-            android:exported="false" />
-        <activity
-            android:name=".BookEquipmentActivity"
+            android:name=".Add_Equipment"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".PaymentActivity"
+            android:name=".Owner_Profile"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
     </application>
