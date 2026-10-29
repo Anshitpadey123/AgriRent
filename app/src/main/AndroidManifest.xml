@@ -84,18 +84,23 @@
         <activity
             android:name=".Owner_HomeScreen"
             android:exported="false"
-            android:windowSoftInputMode="adjustResize"/>
+            android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".Farmerhomescreen"
             android:exported="false"
-            android:windowSoftInputMode="adjustResize"/>
+            android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".SearchEquipment"
             android:exported="false"
-            android:windowSoftInputMode="adjustResize"/>
-
-
-
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".Add_Equipment"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".Owner_Profile"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
     </application>
 
 </manifest>
