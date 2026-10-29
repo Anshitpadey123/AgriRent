@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F8F4"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/paymentBackButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="← Back to Booking"
+            android:textColor="#198754"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Payment"
+            android:textColor="#183B25"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="Review your rental details before continuing."
+            android:textColor="#666666"
+            android:textSize="15sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp"
+            android:background="#E1F0E3"
+            android:orientation="vertical"
+            android:padding="18dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="BOOKING SUMMARY"
+                android:textColor="#526653"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/paymentEquipmentName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="🚜 Farm Tractor"
+                android:textColor="#183B25"
+                android:textSize="21sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/paymentRentalDates"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Rental dates: Not selected"
+                android:textColor="#526653"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/paymentRentalDays"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="Duration: 0 days"
+                android:textColor="#526653"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/paymentDailyPrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="Rate: ₹0/day"
+                android:textColor="#526653"
+                android:textSize="14sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="16dp"
+                android:background="#C6DCCB" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:text="Total Amount"
+                android:textColor="#526653"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/paymentTotalAmount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="₹0"
+                android:textColor="#198754"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Choose Payment Method"
+            android:textColor="#183B25"
+            android:textSize="19sp"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:id="@+id/paymentMethodGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/upiOption"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="#198754"
+                android:padding="12dp"
+                android:text="UPI"
+                android:textColor="#263A2B"
+                android:textSize="16sp" />
+
+            <RadioButton
+                android:id="@+id/cardOption"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="#198754"
+                android:padding="12dp"
+                android:text="Credit / Debit Card"
+                android:textColor="#263A2B"
+                android:textSize="16sp" />
+
+            <RadioButton
+                android:id="@+id/cashOption"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="#198754"
+                android:padding="12dp"
+                android:text="Pay the equipment owner directly"
+                android:textColor="#263A2B"
+                android:textSize="16sp" />
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="#FFF3D6"
+            android:padding="12dp"
+            android:text="Demo mode: online payments are not enabled yet. No money will be charged."
+            android:textColor="#785719"
+            android:textSize="13sp" />
+
+        <Button
+            android:id="@+id/payNowButton"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="22dp"
+            android:layout_marginBottom="24dp"
+            android:backgroundTint="#198754"
+            android:text="Continue"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+</ScrollView>

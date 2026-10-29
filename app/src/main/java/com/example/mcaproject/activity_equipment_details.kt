@@ -58,12 +58,31 @@ class EquipmentDetailsActivity : AppCompatActivity() {
         bookButton.alpha = if (isAvailable) 1f else 0.5f
 
         bookButton.setOnClickListener {
-            Toast.makeText(
-                this,
-                "Booking flow for $equipmentName will be added next.",
-                Toast.LENGTH_SHORT
-            ).show()
+            if (!isAvailable) {
+                Toast.makeText(
+                    this,
+                    "This equipment is unavailable.",
+                    Toast.LENGTH_SHORT
+                ).show()
+                return@setOnClickListener
+            }
+
+            val bookingIntent = Intent(
+                this@EquipmentDetailsActivity,
+                BookEquipmentActivity::class.java
+            ).apply {
+                putExtra("equipment_id", equipmentId)
+                putExtra("equipment_name", equipmentName)
+                putExtra("equipment_category", equipmentCategory)
+                putExtra("equipment_price", equipmentPrice)
+                putExtra("equipment_emoji", equipmentEmoji)
+                putExtra("equipment_location", equipmentLocation)
+                putExtra("equipment_available", isAvailable)
+            }
+
+            startActivity(bookingIntent)
         }
+
 
         findViewById<TextView>(R.id.backButton).setOnClickListener {
             finish()
