@@ -61,12 +61,21 @@ class Farmerhomescreen : AppCompatActivity() {
                 }
 
                 R.id.nav_bookings -> {
-                    showMessage("My Bookings screen will open here")
+                    startActivity(
+                        Intent(
+                            this@Farmerhomescreen,
+                            MyBookingsActivity::class.java
+                        )
+                    )
                     true
                 }
-
                 R.id.nav_profile -> {
-                    showMessage("Farmer Profile screen will open here")
+                    startActivity(
+                        Intent(
+                            this@Farmerhomescreen,
+                            FarmerProfileActivity::class.java
+                        )
+                    )
                     true
                 }
 

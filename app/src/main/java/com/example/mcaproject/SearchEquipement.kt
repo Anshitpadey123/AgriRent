@@ -144,12 +144,22 @@ class SearchEquipment : AppCompatActivity() {
                 }
 
                 R.id.nav_bookings -> {
-                    // Connect your Bookings screen here later
+                    startActivity(
+                        Intent(
+                            this@SearchEquipment,
+                            MyBookingsActivity::class.java
+                        )
+                    )
                     true
                 }
 
                 R.id.nav_profile -> {
-                    // Connect your Profile screen here later
+                    startActivity(
+                        Intent(
+                            this@SearchEquipment,
+                            FarmerProfileActivity::class.java
+                        )
+                    )
                     true
                 }
 
