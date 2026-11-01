@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="16dp"
+    app:cardCornerRadius="18dp"
+    app:cardElevation="4dp"
+    app:cardBackgroundColor="#FFFFFF">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+        <!-- Equipment Image -->
+
+<ImageView
+    android:id="@+id/imgEquipment"
+    android:layout_width="match_parent"
+    android:layout_height="190dp"
+    android:scaleType="centerCrop"
+    android:src="@drawable/tractorimage"/>
+
+        <!-- Details -->
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+            <!-- Category Badge -->
+
+<TextView
+    android:id="@+id/txtCategory"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/category_bg"
+    android:paddingHorizontal="12dp"
+    android:paddingVertical="5dp"
+    android:text="TRACTOR"
+    android:textColor="#2E7D32"
+    android:textStyle="bold"
+    android:textSize="12sp"/>
+
+            <!-- Equipment Name -->
+
+<TextView
+    android:id="@+id/txtEquipmentName"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:text="John Deere 5310"
+    android:textSize="22sp"
+    android:textStyle="bold"
+    android:textColor="#212121"/>
+
+            <!-- Brand -->
+
+            <TextView
+                android:id="@+id/txtBrand"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Brand : John Deere"
+                android:textSize="15sp"
+                android:textColor="#616161"/>
+
+            <!-- Model -->
+
+            <TextView
+                android:id="@+id/txtModel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Model : 5310"
+                android:textSize="15sp"
+                android:textColor="#616161"/>
+
+            <!-- Rent -->
+
+            <TextView
+                android:id="@+id/txtRent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="₹2500 / Day"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#2E7D32"/>
+
+            <!-- Location -->
+
+            <TextView
+                android:id="@+id/txtLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="📍 Agra, Uttar Pradesh"
+                android:textSize="15sp"/>
+
+            <!-- Description -->
+
+            <TextView
+                android:id="@+id/txtDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:text="Powerful tractor in excellent condition. Suitable for farming and cultivation."
+                android:textSize="14sp"
+                android:textColor="#757575"/>
+
+            <!-- Status -->
+
+            <TextView
+                android:id="@+id/txtStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/status_available_bg"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="5dp"
+                android:text="Available"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"/>
+
+            <!-- Buttons -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:gravity="end"
+                android:orientation="horizontal">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnEdit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:text="Edit"
+                    android:textAllCaps="false"
+                    android:textColor="#FFFFFF"
+                    android:backgroundTint="#2E7D32"
+                    app:icon="@drawable/baseline_edit_24"
+                    app:cornerRadius="12dp"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnDelete"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="12dp"
+                    android:text="Delete"
+                    android:textAllCaps="false"
+                    android:textColor="#FFFFFF"
+                    android:backgroundTint="#D32F2F"
+                    app:icon="@drawable/outline_delete_24"
+                    app:cornerRadius="12dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

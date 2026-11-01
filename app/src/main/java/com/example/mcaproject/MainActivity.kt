@@ -17,13 +17,15 @@ class MainActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
 
-        val started = findViewById<Button>(R.id.btn_getstarted)
+        Handler(Looper.getMainLooper()).postDelayed({
 
-        started.setOnClickListener {
-            val intent  = Intent(this,Next::class.java)
-            startActivity(intent)
+            startActivity(Intent(this, Next::class.java))
+            finish()
 
-        }
+        }, 3000) // 3 seconds
+
+
+
 
 
     }
