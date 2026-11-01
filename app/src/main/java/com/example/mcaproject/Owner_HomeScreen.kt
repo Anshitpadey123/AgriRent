@@ -13,6 +13,18 @@ class Owner_HomeScreen : AppCompatActivity() {
 
         setContentView(R.layout.activity_owner_home_screen)
 
+        val cardMyEquipment = findViewById<com.google.android.material.card.MaterialCardView>(R.id.cardEquipment)
+        cardMyEquipment.setOnClickListener {
+            val intent = Intent(this, My_Equipment::class.java)
+            startActivity(intent)
+        }
+
+        val cardBookingRequest = findViewById<com.google.android.material.card.MaterialCardView>(R.id.cardRequests)
+        cardBookingRequest.setOnClickListener {
+            val intent = Intent(this, Booking_Request::class.java)
+            startActivity(intent)
+        }
+
         val bottomNav = findViewById<BottomNavigationView>(R.id.bottomNav)
         bottomNav.setOnItemSelectedListener { item ->
             when (item.itemId) {
@@ -23,7 +35,10 @@ class Owner_HomeScreen : AppCompatActivity() {
                     startActivity(Intent(this, Add_Equipment::class.java))
                     true
                 }
-
+                R.id.nav_edit -> {
+                    startActivity(Intent(this, rental_history::class.java))
+                    true
+                }
                 R.id.nav_profile -> {
                     startActivity(Intent(this, Owner_Profile::class.java))
                     true
